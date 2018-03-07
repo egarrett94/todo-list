@@ -2,4 +2,35 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  text-align: center;
+  background: url(https://alaskanlumberjackshow.com/wp-content/uploads/large-old-paper-or-parchment-background-texture.jpg);
+  font-family: 'Indie Flower', cursive;
+  color: #545454;
+
+}
+
+ul {
+	list-style-type: none;
+	width: 200px;
+  	margin: auto;
+}
+
+
+li {
+  border-bottom: 1px solid #ccc;
+  width: 200px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+div{
+  width: 500px;
+  margin: auto;
+}
+
+button {
+  margin-bottom: 10px;
+  padding: 3px;
+  text-align: center;
+  border-radius: 5%;
 }
