@@ -10,6 +10,7 @@ class MyList extends Component {
       toDoItemArray: props.theList,
       newItem: ''
     }
+    this.deleteItem = this.deleteItem.bind(this)
   }
 
   newItemChange (e) {
@@ -34,13 +35,11 @@ class MyList extends Component {
 
   deleteItem(e, index) {
     e.preventDefault()
-    let toDoItemArrayCopy = Array.from(this.state.toDoItemArray)
-    toDoItemArrayCopy = toDoItemArrayCopy.splice(index, 1)
+    this.state.toDoItemArray.splice(index,1)
     this.setState({
-      toDoItemArray: toDoItemArrayCopy
+      toDoItemArray: this.state.toDoItemArray
     })
   }
-
 
   addItem(e) {
     e.preventDefault()
@@ -65,7 +64,7 @@ class MyList extends Component {
               doThis={item}
               deleteItem={(e) => this.deleteItem(e, index)}
               />)
-    })
+    }, this)
 
     return (
      <div>
